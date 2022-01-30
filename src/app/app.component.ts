@@ -23,18 +23,6 @@ export class AppComponent implements OnInit, DoCheck {
 
   ngOnInit(): void {
     console.log('ngOnInit AppComponent');
-
-    // setTimeout(() => {
-    //   console.log('setTimeout AppComponent');
-    // }, 3000);
-
-    setInterval(() => {
-      console.log('setInterval AppComponent');
-    }, 3000);
-
-    this._http.get('https://jsonplaceholder.typicode.com/todos/1').subscribe((response) => {
-      console.log('response', response);
-    });
   }
 
   ngDoCheck(): void {
