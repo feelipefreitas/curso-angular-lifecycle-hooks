@@ -1,9 +1,11 @@
 <div class="container">
 
   <button (click)="updateValues()">Atualizar</button>
+  <button (click)="toggleChild()">Mostrar Child</button>
   
   <div class="child">
     <app-child
+      *ngIf="showChild"
       [texto]="texto"
       [numero]="numero"
       [booleano]="booleano"

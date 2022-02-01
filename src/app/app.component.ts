@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
-import { ChangeDetectionStrategy, Component, DoCheck, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit, DoCheck {
+  showChild = false;
   texto: string = 'TESTE';
   numero: number = 0;
   booleano: boolean = false;
@@ -35,9 +35,14 @@ export class AppComponent implements OnInit, DoCheck {
     this.booleano = true;
 
     this.person.name = 'Carlos';
+    this.person.age = 21;
     // this.person = {};
 
-    // this.people.push('joao');
-    this.people = [];
+    this.people.push('joao');
+    // this.people = [];
+  }
+
+  toggleChild() {
+    this.showChild = !this.showChild;
   }
 }

@@ -1,4 +1,7 @@
-<p>child works!</p>
+<p #texto>child works!</p>
+
+<p #textoAssincrono *ngIf="showText">ASSINCRONO</p>
+
 <button (click)="updateTexto()">Atualizar Texto</button>
 
 <ng-content></ng-content>
